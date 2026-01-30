@@ -1,10 +1,10 @@
 import streamlit as st
 from PIL import Image
 
-from cascaded.metadata import analyze_metadata
-from cascaded.ela import perform_ela
-from cascaded.noise import noise_analysis
-from cascaded.decision import final_decision
+from metadata import analyze_metadata
+from ela import perform_ela
+from noise import noise_analysis
+from decision import final_decision
 
 st.title("🧠 AI Image Manipulation Detection")
 
@@ -39,3 +39,4 @@ if uploaded_file:
     st.write("Confidence Score:", confidence)
 
     st.image(ela_img, caption="ELA Image")
+
