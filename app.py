@@ -21,7 +21,7 @@ if uploaded_file:
     ela_score, ela_img = perform_ela(image)
 
     # Stage 3
-    noise_var = noise_analysis(image)
+    noise_var = noise_variance(image)
 
     # (Optional) Stage 4 – DL model
     model_pred = 1  # placeholder (0 = real, 1 = fake)
@@ -39,5 +39,6 @@ if uploaded_file:
     st.write("Confidence Score:", confidence)
 
     st.image(ela_img, caption="ELA Image")
+
 
 
