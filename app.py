@@ -3,7 +3,7 @@ from PIL import Image
 
 from metadata import analyze_metadata
 from ela import perform_ela
-from noise import noise_analysis
+from noise import noise_variance
 from decision import final_decision
 
 st.title("🧠 AI Image Manipulation Detection")
@@ -39,4 +39,5 @@ if uploaded_file:
     st.write("Confidence Score:", confidence)
 
     st.image(ela_img, caption="ELA Image")
+
 
