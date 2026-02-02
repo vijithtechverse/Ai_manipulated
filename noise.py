@@ -1,7 +1,9 @@
 import numpy as np
-from PIL import Image
 
-def noise_variance(image_path):
-    img = Image.open(image_path).convert("L")
+def noise_variance(image):
+    """
+    image: PIL.Image.Image
+    """
+    img = image.convert("L")
     img = np.array(img)
     return np.var(img)
